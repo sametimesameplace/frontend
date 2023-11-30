@@ -11,7 +11,7 @@ export const api = axios.create({
 // always attach Authorization to requests if token exists
 api.interceptors.request.use(function (config) {
     const token = localStorage.getItem('token');
-    config.headers.Authorization =  token ? `Token: ${token}` : '';
+    config.headers.Authorization =  token ? `Token ${JSON.parse(token)}` : '';
     return config;
 });
 
