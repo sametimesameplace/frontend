@@ -1,0 +1,605 @@
+* {
+  box-sizing: border-box;
+  z-index: 2;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #ffffffc1;
+  height: 100%;
+  color: #0d3645;
+}
+.Dashboard {
+  z-index: 2;
+  position: relative;
+  text-align: center;
+}
+.Dashboard-whitespace {
+  background-color: #ffffff;
+  z-index: 2;
+}
+.Background-image2 {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+}
+.Dashboard-table {
+  z-index: 2;
+  position: relative;
+  top: 0;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  background-color: #bce9feb9;
+  width: 1200px;
+  border-radius: 16px;
+  padding: 2rem;
+}
+.Dashboard-content-columns {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffffc1;
+  width: 1200px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #bce9fe;
+  height: 100%;
+  color: #0d3645;
+}
+p,
+span,
+button {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 300;
+}
+
+.LandingPages {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.App-logo {
+  height: 8rem;
+}
+.App-logo:hover {
+  animation: pulseRotate 2s ease-in-out infinite;
+  display: inline-block;
+}
+@keyframes pulseRotate {
+  0% {
+    transform: scale(1) rotate(0deg);
+    filter: hue-rotate(0deg);
+  }
+  25% {
+    transform: scale(1.05) rotate(-5deg);
+    filter: hue-rotate(-30deg);
+  }
+  50% {
+    transform: scale(1) rotate(0deg);
+    filter: hue-rotate(0deg);
+  }
+  75% {
+    transform: scale(0.95) rotate(5deg);
+    filter: hue-rotate(30deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    filter: hue-rotate(0deg);
+  }
+}
+.App-logo-container {
+  height: 8rem;
+}
+.App-header {
+  background-color: #ffffff09;
+  margin: 2rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 1rem;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  flex-shrink: 1;
+}
+@media (min-width: 1200px) {
+  .App-header {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 1199px) {
+  .App-header {
+    min-width: 0;
+    flex-shrink: 1;
+    padding: 1rem;
+  }
+}
+
+.App-Main {
+  padding-bottom: 1rem;
+  flex: 1;
+  flex-shrink: 1;
+  border-radius: 2rem;
+}
+
+.Hero-Container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  height: 100vh;
+  margin: 0 auto;
+  max-width: 1200px;
+
+  margin-bottom: 2rem;
+}
+.Hero-Content {
+  display: flex;
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+}
+
+.textContainer {
+  background: #bce9feb9;
+  padding: 2rem;
+  border-radius: 2rem;
+  text-align: left;
+  margin-right: 2rem;
+  z-index: 2;
+  max-width: 70%;
+  min-width: 300px;
+}
+
+.background-img {
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  border-radius: 1.5rem;
+}
+
+.Register-button,
+.Login-button {
+  padding: 0.75rem 1.5rem;
+  margin: 0.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+
+  box-shadow: 0 0.5rem 1rem rgba(13, 54, 69, 0.2);
+}
+
+.Login-button {
+  background-color: #add8e6;
+}
+.Register-button {
+  background-color: #f0e68c;
+  box-shadow: 0 0.5rem 1rem rgba(255, 250, 129, 0.2);
+}
+
+.columnContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1rem;
+  background: rgba(184, 219, 241, 0.8);
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  width: auto;
+  min-width: 150px;
+  max-width: 25%;
+  margin-left: 2rem;
+  margin-top: 0rem;
+  height: 150px;
+}
+.columnContainer2 {
+  margin: 2rem;
+  position: relative;
+  top: 2rem;
+  min-width: 300px;
+  max-width: 20%;
+}
+.columnContainer3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  z-index: 2;
+  width: auto;
+  min-width: 150px;
+  max-width: 25%;
+  margin-left: 2rem;
+}
+
+.Column-button {
+  padding: 1rem 2rem;
+  margin: 0.5rem 0;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: box-shadow 0.3s ease-in-out;
+  color: #0d3645;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+h2 {
+  font-size: 2rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 300;
+  line-height: 90%;
+  margin: 0;
+}
+.Home-button {
+  background-color: #f0e68c;
+  font-weight: 300;
+}
+
+.About-button {
+  background-color: #add8e6;
+  box-shadow: 0 0.5rem 1rem rgba(255, 255, 255, 0.2);
+  font-weight: 300;
+}
+
+.Column-button:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.App-footer {
+  color: #0d3645;
+  padding: 1rem;
+  padding-top: 0;
+  width: 100%;
+
+  margin-top: auto;
+  z-index: 1;
+}
+
+.Footer-background {
+  width: 100%;
+  height: auto;
+}
+
+.Footer-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+}
+h1 {
+  font-size: 8rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 300;
+  line-height: 90%;
+  margin: 0;
+}
+.Impressum-button {
+  background-color: white;
+  width: 200px;
+  height: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0.5rem 1rem rgba(13, 54, 69, 0.2);
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 300;
+}
+.Secret-button {
+  width: 200px;
+  background-color: #f0e68ca3;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  box-shadow: 0 0.5rem 1rem rgba(13, 54, 69, 0.2);
+}
+.flashy-disappear {
+  animation: flashyDisappear 0.5s forwards;
+}
+
+@keyframes flashyDisappear {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+.Secret-button:hover {
+  transform: scale(0.85);
+  opacity: 0.8;
+  background-color: #e8da5eb5;
+}
+.Secret-button.flashy-disappear {
+  animation: flashyDisappear 0.5s forwards;
+}
+
+@keyframes flashyDisappear {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+.button {
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.button:hover {
+  transform: translateY(-3px) rotate(-1deg);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  background-color: #e8da5e;
+}
+.button:active {
+  transform: translateY(-1px) rotate(-0.5deg);
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.4);
+  background-color: #d4c045;
+}
+.button2:hover {
+  transform: translateY(3px) rotate(1deg);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  background-color: #bdefff;
+}
+
+.button2:active {
+  transform: translateY(1px) rotate(0.5deg);
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.4);
+  background-color: #7edfff;
+}
+.button,
+.button2 {
+  position: relative;
+  overflow: hidden;
+}
+
+.button::after,
+.button2::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.button:active::after,
+.button2:active::after {
+  width: 200%;
+  height: 200%;
+  opacity: 0;
+}
+
+.Footer-background {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  object-fit: cover;
+  z-index: 1;
+}
+/*# app css stuff to sort out later */
+.Matches-Container {
+  padding: 2rem;
+  border-radius: 2rem;
+  text-align: center;
+  height: 240px;
+  z-index: 2;
+}
+.Impressum-button {
+  width: 200px;
+  height: 2rem;
+}
+.Dashboard-Content-columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+
+  width: 1200px;
+}
+.Matches-button {
+  padding: 1rem 2rem;
+  margin: 0.5rem 0;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: box-shadow 0.3s ease-in-out;
+  color: #0d3645;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.columnContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 2rem;
+  height: 200px;
+}
+.Matches-Container {
+  padding: 2rem;
+  border-radius: 2rem;
+  text-align: center;
+  height: 200px;
+  z-index: 2;
+}
+.Matches-Content-Header {
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Dashboard-table {
+  font-family: "IBM Plex Mono", monospace;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 1rem; /* Adjust spacing between rows */
+  background-color: #bce9feb9; /* Change to match your desired color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adjust shadow to match your design */
+}
+
+.Dashboard-table thead tr {
+  background-color: #a7c7e700; /* Change to match your header background color */
+}
+
+.Dashboard-table th,
+.Dashboard-table td {
+  text-align: center;
+  padding: 10px; /* Adjust padding to match your design */
+}
+
+/* For zebra striping */
+.Dashboard-table tbody tr:nth-child(odd) {
+  background-color: #ffffffc1; /* Lighter row color */
+}
+
+.Dashboard-table tbody tr:nth-child(even) {
+  background-color: #ffffffc1; /* Darker row color */
+}
+
+/* Styling for possible matches and active chats columns */
+.Dashboard-table tbody .possible-matches,
+.Dashboard-table tbody .active-chats {
+  display: inline-block;
+  padding: 5px 10px;
+  margin-right: 5px;
+  background-color: #ffffff; /* Change to match your design */
+  border-radius: 15px; /* Adjust for rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adjust shadow to match your design */
+}
+
+/* Pagination buttons */
+.pagination-btn {
+  padding: 5px 10px;
+  margin-top: 10px;
+  color: #ffffff; /* Adjust text color */
+  background-color: #007bff; /* Adjust button color */
+  border: none;
+  border-radius: 20px; /* Adjust for rounded corners */
+  cursor: pointer;
+}
+
+/* Arrow icons inside the buttons */
+
+/* Hover effects for interactivity */
+.pagination-btn:hover,
+.Dashboard-table tbody .possible-matches:hover,
+.Dashboard-table tbody .active-chats:hover {
+  opacity: 0.8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .Dashboard-table th,
+  .Dashboard-table td {
+    padding: 5px; /* Smaller padding for mobile */
+  }
+}
+/* Rounded corners for the first and last cell of each row */
+.Dashboard-table tr td:first-child {
+  border-top-left-radius: 10px; /* Adjust the radius to your preference */
+  border-bottom-left-radius: 10px;
+}
+
+.Dashboard-table tr td:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.TimePlace-Container {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.Navbar button {
+  padding: 10px 15px;
+  margin: 0 5px;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  font-family: "IBM Plex Mono", monospace;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.Navbar .Logout.button {
+  background-color: #f0e68c; /* Light yellow for logout */
+}
+
+.Navbar .Profile.button2 {
+  background-color: #add8e6; /* Light blue for profile */
+}
+
+.Navbar button:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.Navbar button:active {
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.4);
+}
+
+.Dashboard-whitespace {
+  min-height: 100vh; /* full height of the viewport */
+  /* Stack children vertically */
+}
+
+.App-footer {
+  z-index: 2;
+}
+.Navbar,
+.App-footer {
+  background-image: url("../../images/image\ 1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 2;
+}
+.Impressum-button {
+  height: 50px;
+}
+.Chat-button {
+  background-color: #ffffffcb;
+  width: 200px;
+}
+.Matches-button {
+  width: 200px;
+}

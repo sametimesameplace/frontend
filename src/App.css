@@ -1,0 +1,357 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #bce9fe;
+  height: 100%;
+  color: #0d3645;
+}
+p,
+span,
+button {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 300;
+}
+
+.LandingPages {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.App-logo {
+  height: 8rem;
+}
+.App-logo:hover {
+  animation: pulseRotate 2s ease-in-out infinite;
+  display: inline-block;
+}
+@keyframes pulseRotate {
+  0% {
+    transform: scale(1) rotate(0deg);
+    filter: hue-rotate(0deg);
+  }
+  25% {
+    transform: scale(1.05) rotate(-5deg);
+    filter: hue-rotate(-30deg);
+  }
+  50% {
+    transform: scale(1) rotate(0deg);
+    filter: hue-rotate(0deg);
+  }
+  75% {
+    transform: scale(0.95) rotate(5deg);
+    filter: hue-rotate(30deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    filter: hue-rotate(0deg);
+  }
+}
+.App-logo-container {
+  height: 8rem;
+}
+.App-header {
+  background-color: #ffffff09;
+  margin: 2rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 1rem;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  flex-shrink: 1;
+}
+@media (min-width: 1200px) {
+  .App-header {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 1199px) {
+  .App-header {
+    min-width: 0;
+    flex-shrink: 1;
+    padding: 1rem;
+  }
+}
+
+.App-Main {
+  padding-bottom: 1rem;
+  flex: 1;
+  flex-shrink: 1;
+  border-radius: 2rem;
+}
+
+.Hero-Container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  height: 100vh;
+  margin: 0 auto;
+  max-width: 1200px;
+
+  margin-bottom: 2rem;
+}
+.Hero-Content {
+  display: flex;
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+}
+
+.textContainer {
+  background: #bce9feb9;
+  padding: 2rem;
+  border-radius: 2rem;
+  text-align: left;
+  margin-right: 2rem;
+  z-index: 2;
+  max-width: 70%;
+  min-width: 300px;
+}
+
+.background-img {
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  border-radius: 1.5rem;
+}
+
+.Register-button,
+.Login-button {
+  padding: 0.75rem 1.5rem;
+  margin: 0.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+
+  box-shadow: 0 0.5rem 1rem rgba(13, 54, 69, 0.2);
+}
+
+.Login-button {
+  background-color: #add8e6;
+}
+.Register-button {
+  background-color: #f0e68c;
+  box-shadow: 0 0.5rem 1rem rgba(255, 250, 129, 0.2);
+}
+
+.columnContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1rem;
+  background: rgba(184, 219, 241, 0.8);
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  width: auto;
+  min-width: 150px;
+  max-width: 25%;
+  margin-left: 2rem;
+  margin-top: 0rem;
+  height: 150px;
+}
+.columnContainer2 {
+  margin: 2rem;
+  position: relative;
+  top: 2rem;
+  min-width: 300px;
+  max-width: 20%;
+}
+.columnContainer3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  z-index: 2;
+  width: auto;
+  min-width: 150px;
+  max-width: 25%;
+  margin-left: 2rem;
+}
+
+.Column-button {
+  padding: 1rem 2rem;
+  margin: 0.5rem 0;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: box-shadow 0.3s ease-in-out;
+  color: #0d3645;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+h2 {
+  font-size: 2rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 300;
+  line-height: 90%;
+  margin: 0;
+}
+.Home-button {
+  background-color: #f0e68c;
+  font-weight: 300;
+}
+
+.About-button {
+  background-color: #add8e6;
+  box-shadow: 0 0.5rem 1rem rgba(255, 255, 255, 0.2);
+  font-weight: 300;
+}
+
+.Column-button:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.App-footer {
+  color: #0d3645;
+  padding: 1rem;
+  padding-top: 0;
+  width: 100%;
+
+  margin-top: auto;
+  z-index: 1;
+}
+
+.Footer-background {
+  width: 100%;
+  height: auto;
+}
+
+.Footer-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+}
+h1 {
+  font-size: 8rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 300;
+  line-height: 90%;
+  margin: 0;
+}
+.Impressum-button {
+  background-color: white;
+  width: 200px;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(13, 54, 69, 0.2);
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 300;
+}
+.Secret-button {
+  width: 200px;
+  background-color: #f0e68ca3;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  box-shadow: 0 0.5rem 1rem rgba(13, 54, 69, 0.2);
+}
+.flashy-disappear {
+  animation: flashyDisappear 0.5s forwards;
+}
+
+@keyframes flashyDisappear {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+.Secret-button:hover {
+  transform: scale(0.85);
+  opacity: 0.8;
+  background-color: #e8da5eb5;
+}
+.Secret-button.flashy-disappear {
+  animation: flashyDisappear 0.5s forwards;
+}
+
+@keyframes flashyDisappear {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+.button {
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.button:hover {
+  transform: translateY(-3px) rotate(-1deg);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  background-color: #e8da5e;
+}
+.button:active {
+  transform: translateY(-1px) rotate(-0.5deg);
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.4);
+  background-color: #d4c045;
+}
+.button2:hover {
+  transform: translateY(3px) rotate(1deg);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  background-color: #bdefff;
+}
+
+.button2:active {
+  transform: translateY(1px) rotate(0.5deg);
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.4);
+  background-color: #7edfff;
+}
+.button,
+.button2 {
+  position: relative;
+  overflow: hidden;
+}
+
+.button::after,
+.button2::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.button:active::after,
+.button2:active::after {
+  width: 200%;
+  height: 200%;
+  opacity: 0;
+}
+
+.Footer-background {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  object-fit: cover;
+  z-index: 1;
+}

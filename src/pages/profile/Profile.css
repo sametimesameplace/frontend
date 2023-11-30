@@ -1,0 +1,177 @@
+/* Profile Page Styling */
+
+.profile-page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  background-color: #bce9fe;
+  min-height: 100vh;
+}
+
+.profile-container {
+  background-color: #ffffffc1;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  max-width: 800px;
+  width: 100%;
+}
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #0d3645;
+  font-family: "Playfair Display", serif;
+}
+
+.profile-info {
+  text-align: left;
+  font-family: "IBM Plex Mono", monospace;
+  color: #0d3645;
+  margin-bottom: 20px;
+}
+
+.profile-action-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.profile-button {
+  padding: 10px 15px;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  font-family: "IBM Plex Mono", monospace;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.profile-button-edit {
+  background-color: #add8e6;
+}
+
+.profile-button-settings {
+  background-color: #f0e68c;
+}
+
+.profile-button:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.profile-button:active {
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.4);
+}
+/* Profile Page Button Styling */
+
+.profile-button {
+  padding: 12px 20px;
+  margin: 5px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.profile-button-edit {
+  background-color: #add8e6;
+  color: #0d3645;
+}
+
+.profile-button-settings {
+  background-color: #f0e68c;
+  color: #0d3645;
+}
+
+.profile-button:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+.profile-button:active {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transform: translateY(-1px);
+}
+/* Profile Page Button Styling */
+
+.profile-edit-btn,
+.profile-settings-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-family: "IBM Plex Mono", monospace;
+
+  letter-spacing: 0.05rem;
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 10px 5px;
+}
+
+.profile-edit-btn {
+  background-color: #add8e6; /* Light blue for Edit Profile */
+  color: #0d3645;
+}
+
+.profile-settings-btn {
+  background-color: #f0e68c; /* Light yellow for Settings */
+  color: #0d3645;
+}
+
+.profile-edit-btn:hover,
+.profile-settings-btn:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transform: translateY(-3px);
+}
+
+.profile-edit-btn:active,
+.profile-settings-btn:active {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  transform: translateY(-1px);
+}
+.back-dashboard-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-family: "IBM Plex Mono", monospace;
+  background-color: #fff; /* A distinct color for the back button */
+  color: #0d3645;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s;
+  margin: 10px 5px;
+}
+
+.back-dashboard-btn:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  background-color: #ffffffab; /* Darker shade on hover */
+  transform: translateY(-3px);
+}
+
+.back-dashboard-btn:active {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  transform: translateY(-1px);
+}
+.Profile-page-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  background-color: #bce9fe;
+  min-height: 100vh;
+}
+.Profilecontent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}

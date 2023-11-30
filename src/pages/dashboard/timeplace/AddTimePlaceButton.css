@@ -1,0 +1,25 @@
+.Add-TimePlace-button {
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 300;
+  background-color: #f0e68ce8;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  color: #0d3645;
+}
+.Add-TimePlace-button:hover {
+  transform: scale(0.95);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  background-color: #e8da5eb5;
+}
+.Add-TimePlace-button:active {
+  transform: scale(0.9);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  background-color: #e8da5e;
+}

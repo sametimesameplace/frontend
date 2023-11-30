@@ -1,0 +1,25 @@
+const initialTokenState = {
+    token: null,
+};
+
+const TokenContext = React.createContext(initialTokenState);
+
+const localAuthState = JSON.parse(localStorage.getItem("token"));
+
+function TokenProvider(props) {
+  const [currentToken, setCurrentToken] = useState(
+    localAuthState || initialTokenState
+  );
+
+  useEffect(() => {
+    localStorage.setItem("token", JSON.stringify(currentToken));
+  }, [currentToken]);
+
+  return (
+    <TokenContext.Provider value={{ currentToken, setCurrentToken }}>
+      {props.children}
+    </TokenContext.Provider>
+  );
+}
+
+export { TokenContext, TokenProvider };

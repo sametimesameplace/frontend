@@ -1,0 +1,82 @@
+/* Add TimePlace Form Styling */
+* {
+  box-sizing: border-box;
+  z-index: 2;
+}
+body {
+  z-index: 2;
+}
+.add-time-place-form {
+  background-color: #ffffffc1;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: center;
+  z-index: 2;
+  position: relative;
+}
+
+.add-time-place-form h2 {
+  color: #0d3645;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 20px;
+}
+
+.add-time-place-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.add-time-place-form input,
+.add-time-place-form textarea {
+  padding: 10px;
+  border-radius: 0.5rem;
+  border: 1px solid #ddd;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.add-time-place-form button {
+  padding: 10px 15px;
+  margin-top: 10px;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  font-family: "IBM Plex Mono", monospace;
+  background-color: #add8e6;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.add-time-place-form button:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  background-color: #9ec8e1;
+}
+
+.add-time-place-form button:active {
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.4);
+}
+.add-time-place-form button:focus {
+  outline: none;
+}
+.add-time-place-form label {
+  font-family: "IBM Plex Mono", monospace;
+  color: #0d3645;
+  font-weight: bold;
+}
+.add-time-place-form input:focus,
+.add-time-place-form textarea:focus {
+  outline: none;
+  border: 1px solid #0d3645;
+}
+.Background {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+}
