@@ -11,6 +11,7 @@ function TimePlaceData({
   end,
   latitude,
   longitude,
+  city,
   description,
   possibleMatches,
   activeChats,
@@ -20,9 +21,9 @@ function TimePlaceData({
       <td>{possibleMatches}</td>
       <td>{activeChats}</td>
       <td>{id}</td>
-      <td>{`${latitude}, ${longitude}`}</td>
-      <td>{start}</td>
-      <td>{end}</td>
+      <td>{city}</td>
+      <td>{new Date(start).toLocaleString("de")}</td>
+      <td>{new Date(end).toLocaleString("de")}</td>
       <td>{description}</td>
     </tr>
   );
