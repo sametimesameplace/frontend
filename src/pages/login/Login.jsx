@@ -14,7 +14,7 @@ export function Register() {
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setRegisterData({...registerData, name: value});
+        setRegisterData({...registerData, [name]: value});
     }
 
 
@@ -54,7 +54,7 @@ export function Login() {
 
     const handleChange = (e) => {
         const {name, value } = e.target;
-        setLoginData({...loginData, name: value})
+        setLoginData({...loginData, [name]: value})
     };
  
 
