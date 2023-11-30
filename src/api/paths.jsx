@@ -18,8 +18,10 @@ export const apiPath = {
         match: "/match"
     },
     timeplace: {
-        timePlace: "/timeplace",
+        timeplace: "/timeplace",
         interests: "/interest",
         activity: "/activity",
+        matches: "/timeplace/id/matches",
+        match: "/timeplace/id/match/andereid"
     }
 }

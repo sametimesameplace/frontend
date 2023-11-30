@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { redirect } from "react-router-dom";
 
-import { getMyTimePlaces } from "../../../api";
+import { getMyTimePlaces, getTimePlaceMatches, getMyMatches } from "../../../api";
 import { appPath } from "../../../api/paths";
 import useToken from "../../../auth/Token";
 
@@ -16,9 +16,33 @@ function TimePlaceData({
   possibleMatches,
   activeChats,
 }) {
+  const [tpMatchData, setTpMatchData] = useState([]);
+  const [tpMatchCount, setTpMatchCount] = useState(0);
+  const [loaded, setLoaded] = useState(false);
+  //const SLICE_AT = 7: todo use backends paginaton
+  useEffect(() => {
+      if (tpMatchData !== undefined){
+          setLoaded(true)
+      }
+  }, [tpMatchData])
+
+  
+  useEffect(() => async () => {
+  if (loaded) {return};
+      const { error, status, data} = await getTimePlaceMatches(id);
+      if (error) {
+          redirect(
+              appPath.error.concat(status.toString())
+          )
+      } 
+      setTpMatchData([...data.results, ...tpMatchData]);
+      setTpMatchCount(data.count);
+  }, []);
+
+  
   return (
     <tr>
-      <td>{possibleMatches}</td>
+      <td>{tpMatchCount}</td>
       <td>{activeChats}</td>
       <td>{id}</td>
       <td>{city}</td>
@@ -33,7 +57,6 @@ export function TimePlaceTable() {
     const [tpData, setTpData] = useState([]);
     const [loaded, setLoaded] = useState(false);
     //const SLICE_AT = 7: todo use backends paginaton
-    const { token } = useToken();
     useEffect(() => {
         if (tpData !== undefined){
             setLoaded(true)
@@ -41,10 +64,9 @@ export function TimePlaceTable() {
     }, [tpData])
 
     
-
     useEffect(() => async () => {
     if (loaded) {return};
-        const { error, status, data} = await getMyTimePlaces(token);
+        const { error, status, data} = await getMyTimePlaces();
         if (error) {
             redirect(
                 appPath.error.concat(status.toString())
@@ -52,6 +74,41 @@ export function TimePlaceTable() {
         } 
         setTpData([...data.results, ...tpData]);
     }, []);
+
+
+    const [matchesData, setMatchesData] = useState([]);
+    const [matchesloaded, setMatchesLoaded] = useState(false);
+    useEffect(() => {
+        if (matchesData !== undefined){
+            setMatchesLoaded(true)
+        }
+    }, [matchesData])
+
+    
+    useEffect(() => async () => {
+    if (matchesloaded) {return};
+        const { error, status, data} = await getMyMatches();
+        if (error) {
+            redirect(
+                appPath.error.concat(status.toString())
+            )
+        } 
+        setMatchesData([...data.results, ...matchesData]);
+    }, []);
+
+    useEffect(() => {
+      if ((loaded && matchesloaded)){
+      console.log(tpData)
+      const _matchData = tpData.map((timeplace) => {
+        console.log(timeplace)
+        const _tpMatches = matchesData.find((match) => {
+          return timeplace.id === match.own_timeplace.id
+        })
+        return {...timeplace, matchcount: _tpMatches.length}
+      })
+      console.log(_matchData)
+    }
+    }, [loaded, matchesloaded]);
     
 
   return (
