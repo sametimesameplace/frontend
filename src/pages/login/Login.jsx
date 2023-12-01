@@ -31,17 +31,61 @@ export function Register() {
     }
 
     return (
-            <>
-                <form onSubmit={handleSubmit}>
-                    <input type="text" id="username" name="username" onChange={handleChange}/>
-                    <input type="email" id="email"name="email" onChange={handleChange}/>
-                    <input type="password" id="password" name="password" onChange={handleChange}/>
-                    <input type="submit" name="submit"/>
-                    {error ? errorMessage : ""}
-                </form>
-            </>
-    )
-
+      <div className="Register">
+        <header className="App-header">
+          <div className="App-logo-container"></div>
+          <div className="App-title-container">
+            <h1 className="App-title">Same Time Same Place</h1>
+          </div>
+        </header>
+        <div className="Register-container">
+          <div className="Register-form-container">
+            <form className="Register-form">
+              <label className="Register-label" htmlFor="username">
+                Username
+              </label>
+              <input
+                onChange={handleChange}
+                className="Register-input"
+                type="text"
+                id="username"
+                name="username"
+              />
+              <label className="Register-label" htmlFor="email">
+                E-Mail
+              </label>
+              <input
+                onChange={handleChange}
+                className="Register-input"
+                type="email"
+                id="email"
+                name="email"
+              />
+              <label className="Register-label" htmlFor="password">
+                Password
+              </label>
+              <input
+                onChange={handleChange}
+                className="Register-input"
+                type="password"
+                id="password"
+                name="password"
+              />
+              <button
+                className="Register-button button"
+                type="submit"
+                onClick={handleSubmit}
+              >
+                Register
+              </button>
+            </form>
+          </div>
+        </div>
+        <div className="Login-footer">
+              {error ? error : ""}
+              </div>
+      </div>
+    );
 };
 
 
