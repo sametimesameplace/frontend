@@ -10,6 +10,7 @@ export function Register() {
     const [registerData, setRegisterData] = useState({});  
     const [error, setError] = useState(false);
     const [errorMessage, setErrorMessage] = useState("");
+    const navigate = useNavigate();
 
 
     const handleChange = (e) => {
@@ -25,16 +26,16 @@ export function Register() {
             setError(true);
             setErrorMessage(data);
         } else {
-            redirect(appPath.login)
+            navigate(appPath.login)
         }
     }
 
     return (
             <>
                 <form onSubmit={handleSubmit}>
-                    <input type="text" name="username" onChange={handleChange} value={""}/>
-                    <input type="mail" name="email" onChange={handleChange}/>
-                    <input type="password" name="password" onChange={handleChange}/>
+                    <input type="text" id="username" name="username" onChange={handleChange}/>
+                    <input type="email" id="email"name="email" onChange={handleChange}/>
+                    <input type="password" id="password" name="password" onChange={handleChange}/>
                     <input type="submit" name="submit"/>
                     {error ? errorMessage : ""}
                 </form>

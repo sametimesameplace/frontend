@@ -8,7 +8,7 @@ export const appPath = {
 
 export const apiPath = {
     user : {
-        user: "/user",
+        user: "/user/",
         profile: "/userprofile",
         userlang: "/userlanguage",
         lang: "/language",

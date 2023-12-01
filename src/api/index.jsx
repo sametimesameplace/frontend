@@ -37,7 +37,7 @@ export const login = async (loginData) => {
 
 export const register = async (registerData) => {
     const response = await api.post(
-        apiPath.user,
+        apiPath.user.user,
         registerData
         );
     return _resolve(response)
