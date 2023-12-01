@@ -22,6 +22,7 @@ export const apiPath = {
         interests: "/interest",
         activity: "/activity",
         matches: "/timeplace/id/matches",
+        chats: "/timeplace/id/chats",
         match: "/timeplace/id/match/andereid"
     }
 }

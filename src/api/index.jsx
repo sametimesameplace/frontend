@@ -68,3 +68,7 @@ export const getTimePlaceMatches = async (id) => {
 }
 
 
+export const getTimePlaceChats = async (id) => {
+    const response = await api.get(apiPath.timeplace.chats.replace("id", id))
+    return _resolve(response)
+}

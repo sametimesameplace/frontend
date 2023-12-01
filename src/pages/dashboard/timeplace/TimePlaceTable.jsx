@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { redirect } from "react-router-dom";
 
-import { getMyTimePlaces, getTimePlaceMatches, getMyMatches } from "../../../api";
+import { getMyTimePlaces, getTimePlaceMatches, getMyMatches, getTimePlaceChats } from "../../../api";
 import { appPath } from "../../../api/paths";
 import useToken from "../../../auth/Token";
 
@@ -18,6 +18,8 @@ function TimePlaceData({
 }) {
   const [tpMatchData, setTpMatchData] = useState([]);
   const [tpMatchCount, setTpMatchCount] = useState(0);
+  const [tpChatData, setTpChatData] = useState([]);
+  const [tpChatCount, setTpChatCount] = useState(0);
   const [loaded, setLoaded] = useState(false);
   //const SLICE_AT = 7: todo use backends paginaton
   useEffect(() => {
@@ -39,11 +41,24 @@ function TimePlaceData({
       setTpMatchCount(data.count);
   }, []);
 
+
+  useEffect(() => async () => {
+    if (loaded) {return};
+        const { error, status, data} = await getTimePlaceChats(id);
+        if (error) {
+            redirect(
+                appPath.error.concat(status.toString())
+            )
+        }
+        setTpChatData([...data.results, ...tpChatData]);
+        setTpChatCount(data.count);
+    }, []);
+
   
   return (
     <tr>
       <td>{tpMatchCount}</td>
-      <td>{activeChats}</td>
+      <td>{tpChatCount}</td>
       <td>{id}</td>
       <td>{city}</td>
       <td>{new Date(start).toLocaleString("de")}</td>
@@ -95,20 +110,6 @@ export function TimePlaceTable() {
         } 
         setMatchesData([...data.results, ...matchesData]);
     }, []);
-
-    useEffect(() => {
-      if ((loaded && matchesloaded)){
-      console.log(tpData)
-      const _matchData = tpData.map((timeplace) => {
-        console.log(timeplace)
-        const _tpMatches = matchesData.find((match) => {
-          return timeplace.id === match.own_timeplace.id
-        })
-        return {...timeplace, matchcount: _tpMatches.length}
-      })
-      console.log(_matchData)
-    }
-    }, [loaded, matchesloaded]);
     
 
   return (
