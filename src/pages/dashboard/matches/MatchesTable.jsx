@@ -6,6 +6,27 @@ import { appPath } from "../../../api/paths";
 import useToken from "../../../auth/Token";
 
 export function MatchesTable(){
+    const [matchData, setMatchData] = useState([]);
+    const [loaded, setLoaded] = useState(false);
+    useEffect(() => {
+        if (matchData !== undefined){
+            setLoaded(true)
+        }
+    }, [matchData])
+
+    
+    useEffect(() => async () => {
+    if (loaded) {return};
+        const { error, status, data} = await getMyMatches();
+        if (error) {
+            redirect(
+                appPath.error.concat(status.toString())
+            )
+        } 
+        setMatchData([...data.results, ...matchData]);
+    }, []);
+
+
     return (
         <div className="Matches columnContainer">
         <div className="Matches-Container">
