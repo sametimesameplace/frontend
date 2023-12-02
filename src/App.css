@@ -355,3 +355,12 @@ h1 {
   object-fit: cover;
   z-index: 1;
 }
+
+.error_message {
+    font-weight: 600;
+    color: red;
+
+}
+
+
+

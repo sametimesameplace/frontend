@@ -12,3 +12,11 @@ export function ErrorPage() {
 
  
 
+export function DisplayError(props) {
+    return (
+        <div class="error_message_wrapper">
+            <p class="error_message">{props.message}</p>
+    </div>
+    )
+}
+

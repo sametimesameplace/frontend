@@ -1,9 +1,9 @@
 import React, { useState }  from "react";
 import { redirect, useNavigate } from "react-router-dom";
-
 import { appPath } from "../../api/paths";
-import { login, register } from "../../api/index";
+import { login, register, } from "../../api/index";
 import useToken from "../../auth/Token";
+import { DisplayError } from "../errors";
 
 
 export function Register() {
@@ -79,11 +79,11 @@ export function Register() {
                 Register
               </button>
             </form>
+            {error ? <DisplayError message={errorMessage} /> : ""}
           </div>
         </div>
         <div className="Login-footer">
-              {error ? error : ""}
-              </div>
+        </div>
       </div>
     );
 };
@@ -92,7 +92,6 @@ export function Register() {
 export function Login() {
     const {setToken} = useToken();
     const [loginData, setLoginData] = useState({});
-    const [password, setPassword] = useState("");
     const [error, setError] = useState(false);
     const [errorMessage, setErrorMessage] = useState(false);
     const navigate = useNavigate();
@@ -103,12 +102,12 @@ export function Login() {
     };
  
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = async(e) => {
         e.preventDefault();
-        const {error, status, data} = await login(loginData);
+        const {error, data} = await login(loginData)
         if (error) {
             setError(true);
-            setErrorMessage("Logindaten incorrect")
+            setErrorMessage(data)
         } else {
             setToken(data.token)
             navigate('/dashboard');
@@ -158,13 +157,12 @@ export function Login() {
               Register
             </button>
           </form>
+        {error ? <DisplayError message={errorMessage} /> : ""}
         </div>
       </div>
       <div className="Login-footer">
-            {error ? error : ""}
             </div>
     </div>
   );
 }
-
 
