@@ -72,3 +72,15 @@ export const getTimePlaceChats = async (id) => {
     const response = await api.get(apiPath.timeplace.chats.replace("id", id))
     return _resolve(response)
 }
+
+
+export const getMyUser = async () => {
+    const response = await api.get(apiPath.user.user)
+    return _resolve(response)
+}
+
+
+export const getMyProfile = async () => {
+    const response = await api.get(apiPath.user.profile)
+    return _resolve(response)
+}
