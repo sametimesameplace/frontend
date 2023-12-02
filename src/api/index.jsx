@@ -82,47 +82,41 @@ export const login = async(loginData) => {
     return await apiRequest(HTTP_METHODS.post, apiPath.user.login, loginData);
 }
 
-export const register = (registerData) => {
+export const register = async(registerData) => {
+    return await apiRequest(HTTP_METHODS.post, apiPath.user.user, registerData);
     };
 
 
 export const getMyMatches = async () => {
-    const response = await api.get(apiPath.match.match)
-    return _resolve(response)   
+    return await apiRequest(HTTP_METHODS.get, apiPath.match.match)
 } 
 
 
 export const getMyTimePlaces = async () => {
-    const response = await api.get(apiPath.timeplace.timeplace)
-    return _resolve(response)   
+    return await api.get(HTTP_METHODS.get, apiPath.timeplace.timeplace)
 }
 
 
 export const postTimePlace = async (timePlaceData) => {
-    const response = await api.post(apiPath.timeplace.timeplace, timePlaceData)
-    return _resolve(response)
+    return await api.post(HTTP_METHODS.get, apiPath.timeplace.timeplace, timePlaceData)
 }
 
 
 export const getTimePlaceMatches = async (id) => {
-    const response = await api.get(apiPath.timeplace.matches.replace("id", id))
-    return _resolve(response)
+    return await api.get(HTTP_METHODS.get, apiPath.timeplace.matches.replace("id", id))
 }
 
 
 export const getTimePlaceChats = async (id) => {
-    const response = await api.get(apiPath.timeplace.chats.replace("id", id))
-    return _resolve(response)
+    return await api.get(HTTP_METHODS.get, apiPath.timeplace.chats.replace("id", id))
 }
 
 
 export const getMyUser = async () => {
-    const response = await api.get(apiPath.user.user)
-    return _resolve(response)
+    return await api.get(HTTP_METHODS.get, apiPath.user.user)
 }
 
 
 export const getMyProfile = async () => {
-    const response = await api.get(apiPath.user.profile)
-    return _resolve(response)
+    return await api.get(HTTP_METHODS.get, apiPath.user.profile)
 }
