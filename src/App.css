@@ -355,3 +355,68 @@ h1 {
   object-fit: cover;
   z-index: 1;
 }
+/* Form Styling */
+
+.custom_form {
+    max-width: 400px; /* todo: this is not responsive */
+    margin: 0 auto;
+}
+
+.form_group {
+    margin-bottom: 1.1rem;
+}
+
+
+.form_label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+.form_input {
+    width: 100%;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    border: 0.1rem solid black; /* TODO: use color constant */
+    border-radius: 0.1rem;
+}
+
+.form_button {
+    background-color: blue; /* TODO: use color constant */
+    color: white;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.1rem;
+    cursor: pointer;
+}
+
+.form_button:hover {
+    background-color: aqua; /*  TODO: use color constant */
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Error Message Styling */
+
+.error_message_wrapper {
+    display: flex;
+    border: 1px solid red;
+    margin: 1rem;
+    padding: 0.5rem;
+}
+
+.error_message {
+    font-weight: 600;
+    color: red;
+
+}
+
+
+

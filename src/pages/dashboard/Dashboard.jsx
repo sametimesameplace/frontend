@@ -11,16 +11,23 @@ import "./Dashboard.css";
 import SecretButton from "../../widgets/SecretButton";
 import { Matches } from "./matches";
 import { TimePlace } from "./timeplace";
+import useToken from "../../auth/Token";
 
 
 export function Navbar() {
-  const navigate = useNavigate();
-  const handleProfileClick = () => {
+    const {setToken} = useToken();  
+    const navigate = useNavigate();
+    
+    const handleProfileClick = () => {
     navigate("/profile");
   };
-  const handleLogoutClick = () => {
-    navigate("/");
+
+    const handleLogoutClick = () => {
+        setToken(null);
+        navigate("/");
+        window.location.reload(false);
   };
+
   return (
     <div className="Navbar">
       <header className="App-header">
