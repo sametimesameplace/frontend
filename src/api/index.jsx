@@ -93,30 +93,38 @@ export const getMyMatches = async () => {
 
 
 export const getMyTimePlaces = async () => {
-    return await api.get(HTTP_METHODS.get, apiPath.timeplace.timeplace)
+    return await apiRequest(HTTP_METHODS.get, apiPath.timeplace.timeplace)
 }
 
 
 export const postTimePlace = async (timePlaceData) => {
-    return await api.post(HTTP_METHODS.get, apiPath.timeplace.timeplace, timePlaceData)
+    return await apiRequest(HTTP_METHODS.get, apiPath.timeplace.timeplace, timePlaceData)
 }
 
 
 export const getTimePlaceMatches = async (id) => {
-    return await api.get(HTTP_METHODS.get, apiPath.timeplace.matches.replace("id", id))
+    return await apiRequest(HTTP_METHODS.get, apiPath.timeplace.matches.replace("id", id))
 }
 
 
 export const getTimePlaceChats = async (id) => {
-    return await api.get(HTTP_METHODS.get, apiPath.timeplace.chats.replace("id", id))
+    return await apiRequest(HTTP_METHODS.get, apiPath.timeplace.chats.replace("id", id))
 }
 
 
 export const getMyUser = async () => {
-    return await api.get(HTTP_METHODS.get, apiPath.user.user)
+    return await apiRequest(HTTP_METHODS.get, apiPath.user.user)
 }
 
 
 export const getMyProfile = async () => {
-    return await api.get(HTTP_METHODS.get, apiPath.user.profile)
+    return await apiRequest(HTTP_METHODS.get, apiPath.user.profile)
 }
+
+
+
+
+
+
+
+
