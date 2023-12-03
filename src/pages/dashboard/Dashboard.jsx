@@ -17,14 +17,17 @@ import useToken from "../../auth/Token";
 export function Navbar() {
     const {setToken} = useToken();  
     const navigate = useNavigate();
+    
     const handleProfileClick = () => {
     navigate("/profile");
   };
+
     const handleLogoutClick = () => {
         setToken(null);
         navigate("/");
-        
+        window.location.reload(false);
   };
+
   return (
     <div className="Navbar">
       <header className="App-header">
