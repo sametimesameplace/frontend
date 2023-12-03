@@ -4,6 +4,7 @@ import { appPath } from "../../api/paths";
 import { login, register, } from "../../api/index";
 import useToken from "../../auth/Token";
 import { DisplayError } from "../errors";
+import FormComponent from "../../components/forms";
 
 
 export function Register() {
@@ -21,7 +22,7 @@ export function Register() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const {error, status, data} = await register(registerData);
+        const {error, data} = await register(registerData);
         if (error) {
             console.log(error, data)
             setError(true);
@@ -126,7 +127,7 @@ export function Login() {
       </header>
       <div className="Login-container">
         <div className="Login-form-container">
-          <form className="Login-form">
+          <FormComponent className="Login-form" errorMessage={errorMessage}>
             <label className="Login-label" htmlFor="username">
               Username
             </label>
@@ -157,13 +158,32 @@ export function Login() {
             <button className="Register-button button" type="submit">
               Register
             </button>
-          </form>
-        {error ? <DisplayError message={errorMessage} /> : ""}
+          </FormComponent>
         </div>
       </div>
       <div className="Login-footer">
             </div>
+
+
+
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   );
 }
 
