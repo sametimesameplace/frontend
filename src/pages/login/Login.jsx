@@ -42,7 +42,7 @@ export function Register() {
         </header>
         <div className="Register-container">
           <div className="Register-form-container">
-            <form className="Register-form">
+            <FormComponent errorMessage={errorMessage} className="Register-form">
               <label className="Register-label" htmlFor="username">
                 Username
               </label>
@@ -80,8 +80,7 @@ export function Register() {
               >
                 Register
               </button>
-            </form>
-            {error ? <DisplayError message={errorMessage} /> : ""}
+            </FormComponent>
           </div>
         </div>
         <div className="Login-footer">
