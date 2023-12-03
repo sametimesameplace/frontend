@@ -28,7 +28,7 @@ export default function FormComponent(props) {
     
     return (
     <div class="custom_form">
-        <form>
+        <form onSubmit={props.onSubmit}>
                {enhancedChildren} 
         </form>
         {errorMessage.length > 0 ? <DisplayError message={errorMessage} /> : ""}
