@@ -47,7 +47,7 @@ const apiRequest = async (method, endpoint, body) => {
     };
 
     const handleError = (e) => {
-        console.log(e.response.data)
+        if (!e.reponse) {return {error: true, status: 400, data: "Connection to server timed out."}}
         return {
             error: true,
             data: e.response ? e.response.data.error : "Unknown error",
