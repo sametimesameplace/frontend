@@ -23,6 +23,7 @@ export function Register() {
         e.preventDefault();
         const {error, status, data} = await register(registerData);
         if (error) {
+            console.log(error, data)
             setError(true);
             setErrorMessage(data);
         } else {
