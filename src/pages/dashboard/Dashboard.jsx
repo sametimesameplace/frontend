@@ -16,7 +16,7 @@ import { TimePlace } from "./timeplace";
 export function Navbar() {
   const navigate = useNavigate();
   const handleProfileClick = () => {
-    navigate("/Profile");
+    navigate("/profile");
   };
   const handleLogoutClick = () => {
     navigate("/");
@@ -29,8 +29,10 @@ export function Navbar() {
         </div>
         <nav>
           <button className="Logout button" onClick={handleLogoutClick}>
+            Logout
           </button>
           <button className="Profile button2" onClick={handleProfileClick}>
+            Profile
           </button>
         </nav>
       </header>

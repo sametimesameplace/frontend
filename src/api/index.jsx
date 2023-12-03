@@ -16,7 +16,6 @@ api.interceptors.request.use(function (config) {
 });
 
 
-
 /* always wrap api call results in the same format */
 const _resolve = (response) => {
     return {
@@ -38,7 +37,7 @@ export const login = async (loginData) => {
 
 export const register = async (registerData) => {
     const response = await api.post(
-        apiPath.user,
+        apiPath.user.user,
         registerData
         );
     return _resolve(response)
@@ -46,13 +45,13 @@ export const register = async (registerData) => {
 
 
 export const getMyMatches = async () => {
-    const response = await api.get(apiPath.match)
+    const response = await api.get(apiPath.match.match)
     return _resolve(response)   
 } 
 
 
 export const getMyTimePlaces = async () => {
-    const response = await api.get(apiPath.timeplace.timePlace)
+    const response = await api.get(apiPath.timeplace.timeplace)
     return _resolve(response)   
 }
 
@@ -63,6 +62,25 @@ export const postTimePlace = async (timePlaceData) => {
 }
 
 
+export const getTimePlaceMatches = async (id) => {
+    const response = await api.get(apiPath.timeplace.matches.replace("id", id))
+    return _resolve(response)
+}
 
 
-    
+export const getTimePlaceChats = async (id) => {
+    const response = await api.get(apiPath.timeplace.chats.replace("id", id))
+    return _resolve(response)
+}
+
+
+export const getMyUser = async () => {
+    const response = await api.get(apiPath.user.user)
+    return _resolve(response)
+}
+
+
+export const getMyProfile = async () => {
+    const response = await api.get(apiPath.user.profile)
+    return _resolve(response)
+}

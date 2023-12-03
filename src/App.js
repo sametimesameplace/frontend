@@ -30,6 +30,7 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path={appPath.dashboard} element={<Dashboard />} />
+        <Route path={appPath.profile} element={<ProfilePage />} />
         <Route path={appPath.login} element={<Login />} />
         <Route path={appPath.register} element={<Register />} />
         <Route path={appPath.error}>

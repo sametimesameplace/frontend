@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { redirect } from "react-router-dom";
 
 import { useNavigate } from "react-router-dom";
 
 import "./Profile.css"; // Import the CSS file for styling
 import backgroundImage2 from "../../images/image44.png";
+import { getMyUser, getMyProfile} from "../../api";
+import { appPath } from "../../api/paths";
 //import { Navbar } from "./Dashboard";: todo: wrapp "logged in pages" and set navbar+ footer
 //import { Footer } from "./Dashboard";
 
@@ -12,6 +15,50 @@ export function ProfilePage() {
   const handleBackClick = () => {
     navigate("/Dashboard");
   };
+
+
+  const [profileData, setProfileData] = useState([]);
+    const [profileLoaded, setProfileLoaded] = useState(false);
+    useEffect(() => {
+        if (profileData !== undefined){
+            setProfileLoaded(true)
+        }
+    }, [profileData])
+
+
+    useEffect(() => async () => {
+    if (profileLoaded) {return};
+        const { error, status, data} = await getMyProfile();
+        if (error) {
+            redirect(
+                appPath.error.concat(status.toString())
+            )
+        }
+        setProfileData([...data, ...profileData]);
+    }, []);
+
+
+    const [userData, setUserData] = useState([]);
+    const [userLoaded, setUserLoaded] = useState(false);
+    useEffect(() => {
+        if (userData !== undefined){
+            setUserLoaded(true)
+        }
+    }, [userData])
+
+
+    useEffect(() => async () => {
+    if (userLoaded) {return};
+        const { error, status, data} = await getMyUser();
+        if (error) {
+            redirect(
+                appPath.error.concat(status.toString())
+            )
+        }
+        setUserData([...data, ...userData]);
+    }, []);
+
+
   return (
     <div className="profile-page-container">
 

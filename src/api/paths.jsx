@@ -8,7 +8,7 @@ export const appPath = {
 
 export const apiPath = {
     user : {
-        user: "/user",
+        user: "/user/",
         profile: "/userprofile",
         userlang: "/userlanguage",
         lang: "/language",
@@ -18,8 +18,11 @@ export const apiPath = {
         match: "/match"
     },
     timeplace: {
-        timePlace: "/timeplace",
+        timeplace: "/timeplace",
         interests: "/interest",
         activity: "/activity",
+        matches: "/timeplace/id/matches",
+        chats: "/timeplace/id/chats",
+        match: "/timeplace/id/match/andereid"
     }
 }
