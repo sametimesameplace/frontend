@@ -1,19 +1,21 @@
 import React, { useState }  from "react";
-import { redirect, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { appPath } from "../../api/paths";
 import { login, register, } from "../../api/index";
+
+
 import useToken from "../../auth/Token";
-import { DisplayError } from "../errors";
 import FormComponent from "../../components/forms";
 
 
 export function Register() {
     const [registerData, setRegisterData] = useState({});  
-    const [error, setError] = useState(false);
+    const [, setError] = useState(false);
     const [errorMessage, setErrorMessage] = useState("");
     const navigate = useNavigate();
 
 
+    const {setToken} = useToken();
     const handleChange = (e) => {
         const { name, value } = e.target;
         setRegisterData({...registerData, [name]: value});
@@ -22,9 +24,9 @@ export function Register() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setToken(null);
         const {error, data} = await register(registerData);
         if (error) {
-            console.log(error, data)
             setError(true);
             setErrorMessage(data);
         } else {
@@ -42,7 +44,7 @@ export function Register() {
         </header>
         <div className="Register-container">
           <div className="Register-form-container">
-            <FormComponent errorMessage={errorMessage} className="Register-form">
+            <FormComponent errorMessage={errorMessage} className="Register-form" onSubmit={handleSubmit}>
               <label className="Register-label" htmlFor="username">
                 Username
               </label>
@@ -52,6 +54,7 @@ export function Register() {
                 type="text"
                 id="username"
                 name="username"
+                required
               />
               <label className="Register-label" htmlFor="email">
                 E-Mail
@@ -62,6 +65,7 @@ export function Register() {
                 type="email"
                 id="email"
                 name="email"
+                required
               />
               <label className="Register-label" htmlFor="password">
                 Password
@@ -72,11 +76,11 @@ export function Register() {
                 type="password"
                 id="password"
                 name="password"
+                required
               />
               <button
                 className="Register-button button"
                 type="submit"
-                onClick={handleSubmit}
               >
                 Register
               </button>
@@ -93,7 +97,7 @@ export function Register() {
 export function Login() {
     const {setToken} = useToken();
     const [loginData, setLoginData] = useState({});
-    const [error, setError] = useState(false);
+    const [, setError] = useState(false);
     const [errorMessage, setErrorMessage] = useState(false);
     const navigate = useNavigate();
 
@@ -107,14 +111,15 @@ export function Login() {
         e.preventDefault();
         const {error, data} = await login(loginData)
         if (error) {
+            console.log(error, data)
             setError(true);
             setErrorMessage(data)
         } else {
-            setToken(data.token)
+            setToken(data.token);
             navigate('/dashboard');
         }
-        
     };
+
 
   return (
     <div className="Login">
@@ -126,7 +131,7 @@ export function Login() {
       </header>
       <div className="Login-container">
         <div className="Login-form-container">
-          <FormComponent className="Login-form" errorMessage={errorMessage}>
+          <FormComponent className="Login-form" errorMessage={errorMessage} onSubmit={handleSubmit}>
             <label className="Login-label" htmlFor="username">
               Username
             </label>
@@ -135,6 +140,7 @@ export function Login() {
               className="Login-input"
               type="text"
               id="username"
+              required
               name="username"
             />
             <label className="Login-label" htmlFor="password">
@@ -146,15 +152,15 @@ export function Login() {
               type="password"
               id="password"
               name="password"
+              required
             />
             <button
               className="Login-button button"
               type="submit"
-              onClick={handleSubmit}
             >
               Login
             </button>
-            <button className="Register-button button" type="submit">
+            <button className="Register-button button" onClick={() => navigate(appPath.register)}>
               Register
             </button>
           </FormComponent>
