@@ -2,6 +2,15 @@ import axios from "axios";
 import { apiPath } from "./paths";
 
 
+export const HTTP_METHODS = {
+    get: "GET",
+    post: "POST",
+    patch: "PATCH",
+    delete: "DELETE"
+}
+
+
+
 export const api = axios.create({
     baseURL: "http://localhost:8000/api/v1/", // todo: make constant or get from env
 });
@@ -15,22 +24,8 @@ api.interceptors.request.use(function (config) {
 });
 
 
-/* always wrap api call results in the same format */
-const _resolve = (response) => {
-    return {
-        error: response.status < 400 ? false : true,
-        status: response.status,
-        data: response.data,
-    }
-}
 
 
-export const HTTP_METHODS = {
-    get: "GET",
-    post: "POST",
-    patch: "PATCH",
-    delete: "DELETE"
-}
 
 
 
