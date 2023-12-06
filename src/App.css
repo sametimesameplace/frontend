@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
 body {
   margin: 0;
   padding: 0;
@@ -357,8 +359,8 @@ h1 {
 }
 /* Form Styling */
 
-.container {
-  background: rgba(173, 216, 230, 0.8); /* Pastel Blue */
+.loginFormContainer {
+  background: rgba(173, 216, 230, 0.8);
   border-radius: 5px;
   box-shadow: 0 1.5px 0 0 rgba(0, 0, 0, 0.924);
   width: 450px;
@@ -442,10 +444,10 @@ h1 {
   margin: 8px 0;
   box-sizing: border-box;
   border: 1px solid #ccc;
-  border-radius: 8px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  color: #333;
+  border-radius: 8px; /* Set the border-radius to control the roundness */
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
 }
 
 .Login-button {
@@ -473,7 +475,7 @@ h1 {
   box-sizing: border-box;
   border: 1px solid #ccc;
   border-radius: 8px; /* Set the border-radius to control the roundness */
-  font-family: "IBM Plex Mono", monospace;
+  font-family: 'Poppins', sans-serif;
   font-weight: 300;
   font-size: 16px;
 }

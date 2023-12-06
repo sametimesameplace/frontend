@@ -44,7 +44,7 @@ export function Register() {
           <h1 className="App-title" style={{ fontFamily: 'IBM Plex mono', letterSpacing: '2px', fontSize: '2vw'}}>Become our newest member | Same Time Same Place</h1>
           </div>
         </header>
-        <div class="container">
+        <div class="loginFormContainer">
         <div className="Register-container">
           <div className="Register-form-container">
             <FormComponent errorMessage={errorMessage} className="Register-form" onSubmit={handleSubmit}>
@@ -102,7 +102,7 @@ export function Register() {
               </button>
             </FormComponent>
             <div className="FormFooter">
-            <p>Already have an account? <a href="login">Login here</a>.</p>
+            <p style={{ fontFamily: 'Poppins'}}>Already have an account? <a href="login">Login here</a>.</p>
           </div>
           </div>
         </div>
@@ -148,11 +148,11 @@ export function Login() {
         <div className="App-logo-container"></div>
 
         <div className="App-title-container">
-        <h1 className="App-title" style={{ fontFamily: 'IBM Plex mono', letterSpacing: '2px', fontSize: '2vw'}}>Login |   Same Time Same Place</h1>
+        <h1 className="App-title" style={{ fontFamily: 'Poppins', letterSpacing: '2px', fontSize: '2vw'}}>Login |   Same Time Same Place</h1>
         </div>
       </header>
       
-    <div class="container">
+    <div class="loginFormContainer">
       <div className="Login-container">
         <div className="Login-form-container">
           <FormComponent className="Login-form" errorMessage={errorMessage} onSubmit={handleSubmit}>
@@ -180,10 +180,6 @@ export function Login() {
               
               required
             />
-            
-
-          
-            
             <button
               className="Login-button button"
               type="submit"
@@ -194,15 +190,14 @@ export function Login() {
               Register
             </button>
           </FormComponent>
-          <div class="remember">
+          <div class="remember" style={{ fontFamily: 'Poppins'}}>
               <input type="checkbox"/>
               Remember me
           </div>
           <div className="FormFooter">
-            <p>Not registered yet? Click <a href="register">here</a> to create a new account.</p>
+            <p style={{ fontFamily: 'Poppins'}}>Not registered yet? Click <a href="register">here</a> to create a new account.</p>
           </div>
-         
-        </div>
+  </div>
     </div>
       </div>
       <div className="Login-footer">
