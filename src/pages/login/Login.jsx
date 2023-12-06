@@ -41,9 +41,10 @@ export function Register() {
         <header className="App-header">
           <div className="App-logo-container"></div>
           <div className="App-title-container">
-            <h2 className="App-title">Register your account here</h2>
+          <h1 className="App-title" style={{ fontFamily: 'IBM Plex mono', letterSpacing: '2px', fontSize: '2vw'}}>Become our newest member | Same Time Same Place</h1>
           </div>
         </header>
+        <div class="container">
         <div className="Register-container">
           <div className="Register-form-container">
             <FormComponent errorMessage={errorMessage} className="Register-form" onSubmit={handleSubmit}>
@@ -105,6 +106,7 @@ export function Register() {
           </div>
           </div>
         </div>
+        </div>
         <div className="Login-footer">
         </div>
       </div>
@@ -140,13 +142,17 @@ export function Login() {
 
 
   return (
+    
     <div className="Login">
       <header className="App-header">
         <div className="App-logo-container"></div>
+
         <div className="App-title-container">
-          <h2 className="App-title" style={{ fontFamily: 'Roboto', fontSize: '2em' }}>Same Time Same Place</h2>
+        <h1 className="App-title" style={{ fontFamily: 'IBM Plex mono', letterSpacing: '2px', fontSize: '2vw'}}>Login |   Same Time Same Place</h1>
         </div>
       </header>
+      
+    <div class="container">
       <div className="Login-container">
         <div className="Login-form-container">
           <FormComponent className="Login-form" errorMessage={errorMessage} onSubmit={handleSubmit}>
@@ -171,8 +177,13 @@ export function Login() {
               id="password"
               name="password"
               placeholder="Password"
+              
               required
             />
+            
+
+          
+            
             <button
               className="Login-button button"
               type="submit"
@@ -183,18 +194,23 @@ export function Login() {
               Register
             </button>
           </FormComponent>
+          <div class="remember">
+              <input type="checkbox"/>
+              Remember me
+          </div>
           <div className="FormFooter">
             <p>Not registered yet? Click <a href="register">here</a> to create a new account.</p>
           </div>
          
         </div>
+    </div>
       </div>
       <div className="Login-footer">
+            </div>
             </div>
 
 
 
-    </div>
 
 
 
