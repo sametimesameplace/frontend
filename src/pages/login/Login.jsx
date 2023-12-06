@@ -8,6 +8,8 @@ import useToken from "../../auth/Token";
 import FormComponent from "../../components/forms";
 
 
+
+
 export function Register() {
     const [registerData, setRegisterData] = useState({});  
     const [, setError] = useState(false);
@@ -39,14 +41,13 @@ export function Register() {
         <header className="App-header">
           <div className="App-logo-container"></div>
           <div className="App-title-container">
-            <h1 className="App-title">Same Time Same Place</h1>
+            <h2 className="App-title">Register your account here</h2>
           </div>
         </header>
         <div className="Register-container">
           <div className="Register-form-container">
             <FormComponent errorMessage={errorMessage} className="Register-form" onSubmit={handleSubmit}>
               <label className="Register-label" htmlFor="username">
-                Username
               </label>
               <input
                 onChange={handleChange}
@@ -54,10 +55,11 @@ export function Register() {
                 type="text"
                 id="username"
                 name="username"
+                placeholder="Username"
                 required
               />
               <label className="Register-label" htmlFor="email">
-                E-Mail
+
               </label>
               <input
                 onChange={handleChange}
@@ -65,10 +67,10 @@ export function Register() {
                 type="email"
                 id="email"
                 name="email"
+                placeholder="Email Address"
                 required
               />
               <label className="Register-label" htmlFor="password">
-                Password
               </label>
               <input
                 onChange={handleChange}
@@ -76,6 +78,19 @@ export function Register() {
                 type="password"
                 id="password"
                 name="password"
+                placeholder="Password"
+                
+                required
+              />
+              <label className="Register-label" htmlFor="confirmPassword">
+              </label>
+              <input
+                onChange={handleChange}
+                className="Register-input"
+                type="password"
+                id="confirmpassword"
+                name="confirmpassword"
+                placeholder="Confirm Password"
                 required
               />
               <button
@@ -85,6 +100,9 @@ export function Register() {
                 Register
               </button>
             </FormComponent>
+            <div className="FormFooter">
+            <p>Already have an account? <a href="login">Login here</a>.</p>
+          </div>
           </div>
         </div>
         <div className="Login-footer">
@@ -126,14 +144,13 @@ export function Login() {
       <header className="App-header">
         <div className="App-logo-container"></div>
         <div className="App-title-container">
-          <h1 className="App-title">Same Time Same Place</h1>
+          <h2 className="App-title" style={{ fontFamily: 'Roboto', fontSize: '2em' }}>Same Time Same Place</h2>
         </div>
       </header>
       <div className="Login-container">
         <div className="Login-form-container">
           <FormComponent className="Login-form" errorMessage={errorMessage} onSubmit={handleSubmit}>
             <label className="Login-label" htmlFor="username">
-              Username
             </label>
             <input
               onChange={handleChange}
@@ -142,9 +159,10 @@ export function Login() {
               id="username"
               required
               name="username"
+              placeholder="Username"
+
             />
             <label className="Login-label" htmlFor="password">
-              Password
             </label>
             <input
               onChange={handleChange}
@@ -152,6 +170,7 @@ export function Login() {
               type="password"
               id="password"
               name="password"
+              placeholder="Password"
               required
             />
             <button
@@ -164,6 +183,10 @@ export function Login() {
               Register
             </button>
           </FormComponent>
+          <div className="FormFooter">
+            <p>Not registered yet? Click <a href="register">here</a> to create a new account.</p>
+          </div>
+         
         </div>
       </div>
       <div className="Login-footer">

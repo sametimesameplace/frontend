@@ -418,5 +418,48 @@ h1 {
 
 }
 
+/* Login Screen Styling */
+
+.Login-input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 8px; /* Set the border-radius to control the roundness */
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 200;
+}
+
+.Login-button {
+  /* Add or adjust styles for your button as needed */
+  border-radius: 8px; /* Match the input field border-radius */
+  font-size: 16px;
+}
+
+/* Registration Screen Styling */
+
+.Register-input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 8px; /* Set the border-radius to control the roundness */
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.Register-button {
+  border-radius: 8px; /* Match the input field border-radius */
+  font-size: 16px;
+}
+
+
+
+
+
+
 
 
