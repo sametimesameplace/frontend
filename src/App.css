@@ -1,3 +1,5 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"); */
+
 body {
   margin: 0;
   padding: 0;
@@ -357,69 +359,85 @@ h1 {
 }
 /* Form Styling */
 
+.loginFormContainer {
+  background: rgba(173, 216, 230, 0.8);
+  border-radius: 5px;
+  box-shadow: 0 1.5px 0 0 rgba(0, 0, 0, 0.924);
+  width: 450px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .custom_form {
-    max-width: 400px; /* todo: this is not responsive */
-    margin: 0 auto;
+  max-width: 400px; /* todo: this is not responsive */
+  margin: 0 auto;
 }
 
 .form_group {
-    margin-bottom: 1.1rem;
+  margin-bottom: 1.1rem;
 }
-
 
 .form_label {
-    display: block;
-    margin-bottom: 0.5rem;
+  display: block;
+  margin-bottom: 0.5rem;
 }
 .form_input {
-    width: 100%;
-    padding: 0.5rem;
-    box-sizing: border-box;
-    border: 0.1rem solid black; /* TODO: use color constant */
-    border-radius: 0.1rem;
+  width: 100%;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  border: 0.1rem solid black; /* TODO: use color constant */
+  border-radius: 0.1rem;
 }
 
 .form_button {
-    background-color: blue; /* TODO: use color constant */
-    color: white;
-    padding: 0.5rem;
-    border: none;
-    border-radius: 0.1rem;
-    cursor: pointer;
+  background-color: blue; /* TODO: use color constant */
+  color: white;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.1rem;
+  cursor: pointer;
 }
 
 .form_button:hover {
-    background-color: aqua; /*  TODO: use color constant */
-    
+  background-color: aqua; /*  TODO: use color constant */
 }
-
-
-
-
-
-
-
-
-
-
 
 /* Error Message Styling */
 
 .error_message_wrapper {
-    display: flex;
-    border: 1px solid red;
-    margin: 1rem;
-    padding: 0.5rem;
+  display: flex;
+  border: 1px solid red;
+  margin: 1rem;
+  padding: 0.5rem;
 }
 
 .error_message {
-    font-weight: 600;
-    color: red;
-
+  font-weight: 600;
+  color: red;
 }
 
 /* Login Screen Styling */
 
+.Login-container {
+  background-color: #add8e6;
+}
+
+.Login-Box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background-color: rgba(173, 216, 230, 0.8);
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(255, 255, 255, 0.107);
+  box-sizing: border-box;
+  border-radius: 2em;
+}
 .Login-input {
   width: 100%;
   padding: 10px;
@@ -427,14 +445,23 @@ h1 {
   box-sizing: border-box;
   border: 1px solid #ccc;
   border-radius: 8px; /* Set the border-radius to control the roundness */
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: 200;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 300;
+  font-size: 16px;
 }
 
 .Login-button {
-  /* Add or adjust styles for your button as needed */
-  border-radius: 8px; /* Match the input field border-radius */
+  border-radius: 8px;
   font-size: 16px;
+  background-color: #ffd700;
+  color: #333;
+  border: none;
+  padding: 12px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
 }
 
 /* Registration Screen Styling */
@@ -455,11 +482,3 @@ h1 {
   border-radius: 8px; /* Match the input field border-radius */
   font-size: 16px;
 }
-
-
-
-
-
-
-
-
