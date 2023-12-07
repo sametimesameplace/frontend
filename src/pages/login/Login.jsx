@@ -2,10 +2,12 @@ import React, { useState }  from "react";
 import { useNavigate } from "react-router-dom";
 import { appPath } from "../../api/paths";
 import { login, register, } from "../../api/index";
+import background from "../../images/blurry_small.jpg";
 
 
 import useToken from "../../auth/Token";
 import FormComponent from "../../components/forms";
+
 
 
 
@@ -37,11 +39,13 @@ export function Register() {
     }
 
     return (
-      <div className="Register">
+      <div className="Register" style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
+      
+
         <header className="App-header">
           <div className="App-logo-container"></div>
           <div className="App-title-container">
-          <h1 className="App-title" style={{ fontFamily: 'IBM Plex mono', letterSpacing: '2px', fontSize: '2vw'}}>Become our newest member | Same Time Same Place</h1>
+          <h1 className="App-title" style={{ fontFamily: "IBM Plex Mono", letterSpacing: '2px', fontSize: '2vw'}}>Register | Same Time Same Place</h1>
           </div>
         </header>
         <div class="loginFormContainer">
@@ -102,7 +106,7 @@ export function Register() {
               </button>
             </FormComponent>
             <div className="FormFooter">
-            <p style={{ fontFamily: 'Poppins'}}>Already have an account? <a href="login">Login here</a>.</p>
+            <p style={{ fontFamily: "IBM Plex Mono"}}>Already have an account? <a href="login">Login here</a>.</p>
           </div>
           </div>
         </div>
@@ -143,12 +147,12 @@ export function Login() {
 
   return (
     
-    <div className="Login">
+    <div className="Login" style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
       <header className="App-header">
         <div className="App-logo-container"></div>
 
         <div className="App-title-container">
-        <h1 className="App-title" style={{ fontFamily: 'Poppins', letterSpacing: '2px', fontSize: '2vw'}}>Login |   Same Time Same Place</h1>
+        <h1 className="App-title" style={{ fontFamily: "IBM Plex Mono", letterSpacing: '2px', fontSize: '2vw'}}>Login |   Same Time Same Place</h1>
         </div>
       </header>
       
@@ -190,19 +194,19 @@ export function Login() {
               Register
             </button>
           </FormComponent>
-          <div class="remember" style={{ fontFamily: 'Poppins'}}>
-              <input type="checkbox"/>
+          <div class="remember" style={{ fontFamily: "IBM Plex Mono"}}>
+              <input type="checkbox" />
               Remember me
           </div>
           <div className="FormFooter">
-            <p style={{ fontFamily: 'Poppins'}}>Not registered yet? Click <a href="register">here</a> to create a new account.</p>
+            <p style={{ fontFamily: "IBM Plex Mono"}}>Not registered yet? Click <a href="register">here</a> to create a new account.</p>
           </div>
-  </div>
-    </div>
-      </div>
-      <div className="Login-footer">
-            </div>
-            </div>
+          </div>
+          </div>
+          <div className="Login-footer">
+          </div>
+          </div>
+          </div>
 
 
 

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"); */
 
 body {
   margin: 0;
@@ -422,7 +422,7 @@ h1 {
 /* Login Screen Styling */
 
 .Login-container {
-  background-color: #add8e6; /* Pastel Blue */
+  background-color: #add8e6;
 }
 
 .Login-Box {
@@ -445,7 +445,7 @@ h1 {
   box-sizing: border-box;
   border: 1px solid #ccc;
   border-radius: 8px; /* Set the border-radius to control the roundness */
-  font-family: 'Poppins', sans-serif;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 300;
   font-size: 16px;
 }
@@ -462,9 +462,7 @@ h1 {
   display: inline-block;
   margin: 4px 2px;
   cursor: pointer;
-  
 }
-
 
 /* Registration Screen Styling */
 
@@ -475,7 +473,7 @@ h1 {
   box-sizing: border-box;
   border: 1px solid #ccc;
   border-radius: 8px; /* Set the border-radius to control the roundness */
-  font-family: 'Poppins', sans-serif;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 300;
   font-size: 16px;
 }
@@ -484,4 +482,3 @@ h1 {
   border-radius: 8px; /* Match the input field border-radius */
   font-size: 16px;
 }
-
