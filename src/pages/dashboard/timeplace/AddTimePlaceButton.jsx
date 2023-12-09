@@ -7,7 +7,7 @@ export function AddTimePlaceButton() {
   let navigate = useNavigate();
 
   const navigateToAddTimePlaceForm = () => {
-    navigate("/add-timeplace-form");
+    navigate("/add-timeplace");
   };
 
   return (

@@ -4,6 +4,7 @@ export const appPath = {
     register: "/register",
     profile: "/profile",
     error: "/error",
+    add_timeplace: "/add-timeplace"
 }
 
 export const apiPath = {
