@@ -9,13 +9,15 @@
 // AddTimePlaceForm.jsx
 import React, { useState } from "react";
 import "./AddTimePlaceForm.css";
-import backgroundImage2 from "./image44.png";
-import { Navbar } from "./Dashboard";
-import { useContext } from "react";
-import { UserContext } from "./Auth/AuthContext";
+import backgroundImage2 from "../../../images/image 3.png";
+import { Navbar } from "../Dashboard";
+// import { useContext } from "react";
+import useToken from "../../../auth/Token";
+
+// import { UserContext } from "./Auth/AuthContext";
 
 export function AddTimePlaceForm() {
-  const { token } = useContext(UserContext);
+  const {token, setToken} = useToken()
   console.log(token);
   const [formData, setFormData] = useState({
     start: "",
