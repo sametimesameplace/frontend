@@ -16,6 +16,9 @@ import useToken from "../../../auth/Token";
 
 // import { UserContext } from "./Auth/AuthContext";
 
+import Select from 'react-select' // https://react-select.com/home
+
+
 export function AddTimePlaceForm() {
   const {token, setToken} = useToken()
   console.log(token);
@@ -39,11 +42,23 @@ export function AddTimePlaceForm() {
     }));
   };
 
-      const handleSubmit = (e) => {
-        e.preventDefault();
-        // Here you would handle the submission to the backend
-        console.log(formData);
-      };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Here you would handle the submission to the backend
+    console.log(formData);
+  };
+
+// TODO: get interests and activities from backend
+  const InterestOptions = [
+    { value: 'chocolate', label: 'Chocolate' },
+    { value: 'strawberry', label: 'Strawberry' },
+    { value: 'vanilla', label: 'Vanilla' }
+  ]
+  
+  const InterestsList = () => (
+    <Select isMulti options={InterestOptions} />
+  )
+
 
   return (
     <div className="add-time-place-form-section">
@@ -96,6 +111,7 @@ export function AddTimePlaceForm() {
             required
             placeholder="Description"
           />
+          <InterestsList />
           {/* Additional fields for interests and activities will depend on how you want to handle those, possibly with checkboxes or multi-select inputs */}
           <button type="submit">Submit</button>
         </form>
